@@ -1,0 +1,45 @@
+Algoritmo sin_titulo
+		m=0
+		h=0
+		Mostrar 'digite la hora inicial'
+		Leer horaini
+		Mostrar 'digite el minuto inicial'
+		Leer minutoini
+		Mostrar 'digite el segundo inicial'
+		Leer segundoini
+		Mostrar "---------------"
+		Mostrar 'digite la hora final'
+		Leer horafin
+		Mostrar 'digite el minuto final'
+		Leer minutofin
+		Mostrar 'digite el segundo final'
+		Leer segundofin
+		hinitotal=horaini*3600
+		minutosinitotal=minutoini*60
+		totalhini=hinitotal+minutosinitotal+segundoini
+		totalhfin=horafin*3600
+		mintotalfin=minutofin*60
+		tthoraf=totalhfin+mintotalfin+segfin
+		si totalhini>tthoraf Entonces
+			Mostrar 'la hora inicial es mayor que la final'
+		SiNo
+			finalt=tthoraf-totalhini
+			si finalt>=60 Entonces
+				Mientras finalt>=60 Hacer
+					m=m+1
+					finalt=finalt-60
+					si m=60 Entonces
+						m=0
+						h=h+1
+					FinSi
+				Fin Mientras
+				seg=finalt
+				Mostrar ' la diferecia es de ', h, ' hora ', m,' minutos ',seg,' segundos '
+			SiNo
+				si finalt>0 Entonces
+					Mostrar 'paso',finalt,'segundos'
+				FinSi
+			FinSi
+		FinSi
+FinAlgoritmo
+	
