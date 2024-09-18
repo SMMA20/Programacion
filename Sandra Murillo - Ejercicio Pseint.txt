@@ -1,45 +1,27 @@
-Algoritmo sin_titulo
-		m=0
-		h=0
-		Mostrar 'digite la hora inicial'
-		Leer horaini
-		Mostrar 'digite el minuto inicial'
-		Leer minutoini
-		Mostrar 'digite el segundo inicial'
-		Leer segundoini
-		Mostrar "---------------"
-		Mostrar 'digite la hora final'
-		Leer horafin
-		Mostrar 'digite el minuto final'
-		Leer minutofin
-		Mostrar 'digite el segundo final'
-		Leer segundofin
-		hinitotal=horaini*3600
-		minutosinitotal=minutoini*60
-		totalhini=hinitotal+minutosinitotal+segundoini
-		totalhfin=horafin*3600
-		mintotalfin=minutofin*60
-		tthoraf=totalhfin+mintotalfin+segfin
-		si totalhini>tthoraf Entonces
-			Mostrar 'la hora inicial es mayor que la final'
-		SiNo
-			finalt=tthoraf-totalhini
-			si finalt>=60 Entonces
-				Mientras finalt>=60 Hacer
-					m=m+1
-					finalt=finalt-60
-					si m=60 Entonces
-						m=0
-						h=h+1
-					FinSi
-				Fin Mientras
-				seg=finalt
-				Mostrar ' la diferecia es de ', h, ' hora ', m,' minutos ',seg,' segundos '
-			SiNo
-				si finalt>0 Entonces
-					Mostrar 'paso',finalt,'segundos'
-				FinSi
-			FinSi
-		FinSi
-FinAlgoritmo
+Algoritmo ejercicio
+	Definir hinicial, mininicial, seginicial, hfinal, minfinal, segfinal, totalSeg, tiempotranscurrido, horas, minutos, segundos Como Entero
 	
+    Escribir 'Digite la hora inicial:'
+    Leer hinicial
+    Escribir 'Digite los minutos iniciales:'
+    Leer mininicial
+    Escribir 'Digite los segundos iniciales:'
+    Leer seginicial
+	
+    Escribir 'Digite la hora final:'
+    Leer hfinal
+    Escribir 'Digite los minutos finales:'
+    Leer minfinal
+    Escribir 'Digite los segundos finales:'
+    Leer segfinal
+	
+    totalSeg <- ((hfinal * 3600 + minfinal * 60 + segfinal) - (hinicial* 3600 + mininicial * 60 + seginicial))
+	
+    horas <- trunc(totalSeg / 3600)
+    minutos <- trunc((totalSeg % 3600) / 60)
+    segundos <- totalSeg % 60
+	
+    Escribir 'El tiempo transcurrido es: ', horas, ' horas ', minutos, ' minutos y ', segundos, ' segundos.'
+FinAlgoritmo
+
+
